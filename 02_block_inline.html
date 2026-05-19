@@ -3,7 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Block Inline</title>
+    <style>
+      div {
+        background-color: salmon;
+        width: 150px;
+        height: 50px;
+        margin: 15px;
+        padding: 15px;
+        /* display: block; */
+      }
+      span {
+        /* display: inline; */
+        background-color: greenyellow;
+        width: 150px;
+        height: 50px;
+        margin: 15px;
+        /* 가로 마진만 적용 */
+        padding: 15px;
+      }
+      .block {
+        display: block;
+      }
+      .inline {
+        display: inline;
+      }
+      .inline-block {
+        /* 배치는 inline, 박스모델은 block */
+        display: inline-block;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div>b1</div>
+    <div>b2</div>
+    <span>i1</span>
+    <span>i2</span>
+    <div class="inline">a1</div>
+    <span class="block">a2</span>
+    <div class="inline-block">a3</div>
+    <div class="inline-block">a4</div>
+    <img src="https://picsum.photos/100/50" />
+    <img src="https://picsum.photos/100/50" />
+    <div style="display: none">b1</div>
+    <div>b2</div>
+    <div style="visibility: hidden">c1</div>
+    <div>c2</div>
+    <hr />
+    <!-- 마진 충돌 방지 및 의미적으로 감싸는 요소 - container -->
+    <div class="container">
+      <div class="container">header : 맨 위에 사이트에 대한 설명 등</div>
+      <div class="container">nav : 버튼, 링크들이 있는 위치</div>
+      <div class="container">
+        section / main / article ... : 실제 컨텐츠들이 들어가는 부분
+      </div>
+      <div class="container">footer : 하단 저작권이나 기타 문구들</div>
+    </div>
+    <!--  -->
+    <section>
+      <!-- component/widget라고 해서 재사용되며 디자인/기능적으로 하나로 묶음인 요소 => div -->
+      <!-- 화면구성/레이아웃에서는 일반적으로 section -->
+      <header>반갑습니다 윌리엄의 포트폴리오</header>
+      <nav>
+        <button>포트폴리오1</button> <button>포트폴리오2</button>
+        <button>포트폴리오3</button>
+      </nav>
+      <main>
+        <section>... 실제 컨텐츠</section>
+        <aside>사이드 컨텐츠, 광고</aside>
+      </main>
+      <footer>2026 저작권 윌리엄</footer>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </body>
 </html>
